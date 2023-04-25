@@ -131,7 +131,7 @@ class Worker extends Employee{
         String type = "Штатный сотрудник";
         String salaryType = "Среднемесячная заработная плата (фиксированная месячная оплата):";
         // "%-10s %-10s; %-18s;  Специальность: %-12s; %-65s: %-7.2f (руб.); рабочих дней %-4d; сумма за месяц %-8.2f", name, surName, type, speciality, salaryType, salary, workingDays, salary * workingDays * 8
-        return String.format("%-10s %-10s; %-18s;  Специальность: %-12s|          %-65s: %-7.2f (руб.)", name, surName, type, speciality, salaryType, salary);
+        return String.format("%-10s %-10s; %-18s;  Специальность: %-12s| %-65s:       %-7.2f (руб.)", name, surName, type, speciality, salaryType, salary);
     }
 }
 
@@ -156,6 +156,6 @@ class Freelancer extends Employee{
     public String toString() {
         String type = "Фрилансер";
         String salaryType = "Заработная плата (в час):";
-        return String.format("%-10s %-10s; %-18s;  Специальность: %-12s| %-25s %-7.2f (руб.); рабочих дней %-4d; сумма за месяц %-8.2f (руб.)", name, surName, type, speciality, salaryType, salary, workingDays, salary * workingDays * 8);
+        return String.format("%-10s %-10s; %-18s;  Специальность: %-12s| %-25s %-7.2f(руб.); рабочих дней %-2d; сумма за месяц %-8.2f (руб.)", name, surName, type, speciality, salaryType, salary, workingDays, salary * workingDays * 8);
     }
 }
